@@ -1,16 +1,22 @@
 
-Board b;
+Board board;
+Ball ball;
+Paddle paddle;
 
 void settings() {
   size(600, 400);
-  b = new Board();
+  board = new Board();
+  ball = new Ball(width / 2 - 5, height - 50);
+  paddle = new Paddle(width / 2 - 40, height - 45);
 }
 
 void setup() {
-  b.printBoard();
+  board.printBoard();
   frameRate(60);
 }
 
 void draw() {
-  b.draw();
+  board.draw();
+  ball.draw();
+  paddle.draw();
 }
